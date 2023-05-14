@@ -1,0 +1,1598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+#background-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* KEYFRAMES FOR SECOND-BODY */
+.first-body .container{
+  animation: moveToLeft 5s;
+}  
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* NAVBAR STYLING STARTS */
+
+nav{
+    position: none;
+    z-index: 99;
+    width: 100%;
+  }
+  nav .wrapper{
+    position: relative;
+    max-width: 1150px;
+    padding: 0px 30px;
+    height: 110px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .first-body nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  nav .wrapper .fa-circle-down{
+      padding-left: 70px;
+  }
+  nav .wrapper .fa-file-invoice{
+      padding-left: 70px;
+  }
+  nav .wrapper .fa-discourse{
+      padding-left: 70px;
+  }
+  nav .wrapper .fa-coins{
+      padding-left: 70px;
+  }
+  nav .wrapper h1{
+    animation: moveToLeft 12s;
+  }
+  nav .menu-btn .fa-bars{
+    animation: moveToRight 12s;
+    color: #fff;
+  }
+  .wrapper button:hover{
+      background-color: transparent;
+      color: #000;
+      transform: scale(.9);
+  }
+  .wrapper button{
+      height: 40px;
+      width: 100px;
+      cursor: pointer;
+      border-radius: 8px;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      font-family: "Dosis", "sans-serif";
+      font-size: 19px;
+  }
+  
+  .wrapper .nav-links{
+    display: inline-flex;
+  }
+  .wrapper .nav-links label{
+      font-family: "Dosis", "sans-serif";
+  }
+  
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links li a{
+    color: #f2f2f2;
+    font-family: "Dosis";
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links li a:hover{
+    background: #3A3B3C;
+  }
+  .top-home{
+      color: rgb(236, 241, 246);
+      font-family: "Dosis", "sans-serif";
+      border-bottom: 2px solid red;
+  }
+  .nav-links .mobile-item{
+    display: none;
+  }
+  
+  .nav-links .drop-menu{
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  
+  .nav-links li:hover .drop-menu,
+  .nav-links li:hover .mega-box{
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+  }
+  
+  .mega-box{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .mega-box .content{
+    background: #242526;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  }
+  
+  .mega-box .content .row{
+    width: calc(25% - 30px);
+    line-height: 45px;
+  }
+  .content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content .row header{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(255,255,255,0.09);
+  }
+  .row .mega-links li{
+    padding: 0 20px;
+  }
+  
+  .row .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    display: block;
+  }
+  .row .mega-links li a:hover{
+    color: #f2f2f2;
+  }
+  
+  .wrapper .btn{
+    color: #430606;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper .fa-times{
+    color: #fff;
+  }
+  .wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  
+    .wrapper .btn{
+      display: block;
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      top: 0;
+      left: -100%;
+      background: #242526;
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+    }
+     
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ffffff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #5c5b5b;
+    }
+    #menu-btn:checked ~ .nav-links{
+      left: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 18px;
+    }
+    .nav-links .drop-menu{
+      position: static;
+      opacity: 1;
+      top: 65px;
+      visibility: visible;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+    #showDrop:checked ~ .drop-menu,
+    #showMega:checked ~ .mega-box{
+      max-height: 100%;
+    }
+    .nav-links .desktop-item{
+      display: none;
+    }
+    .nav-links .mobile-item{
+      display: block;
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links .mobile-item:hover{
+      background: #3A3B3C;
+    }
+    .drop-menu li{
+      margin: 0;
+    }
+    .drop-menu li a{
+      border-radius: 5px;
+      font-size: 17px;
+    }
+    .mega-box{
+      position: static;
+      top: 65px;
+      opacity: 1;
+      visibility: visible;
+      padding: 0 20px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .mega-box .content{
+      box-shadow: none;
+      flex-direction: column;
+      padding: 20px 20px 0 20px;
+    }
+    .mega-box .content .row{
+      width: 100%;
+      margin-bottom: 15px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mega-box .content .row:nth-child(1),
+    .mega-box .content .row:nth-child(2){
+      border-top: 0px;
+    }
+    .content .row .mega-links{
+      border-left: 0px;
+      padding-left: 15px;
+    }
+    .row .mega-links li{
+      margin: 0;
+    }
+    .content .row header{
+      font-size: 19px;
+    }
+
+  nav .wrapper input{
+    display: none;
+  }
+  /*  NAVBAR STYLING STARTS */
+
+ /* FIRST-BODY STARTS */ 
+.first-body{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.first-body nav .logo img{
+    width: 250px;
+}
+/* SEARCH-BODY STARTS  */ 
+/* SEARCH BAR */
+.container1{
+    display: none;
+   }
+/* SEARCH BAR FOR SECOND BODY */
+.first-body .search-bar{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-body .search-bar form{
+    background-color: #ffffff;
+    padding: 10px 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}   
+.first-body .search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 3px 6px;
+    color: rgb(0, 0, 0); 
+    font-size: 15px;
+    width: 80%;
+}
+.first-body .search-bar ::placeholder{
+  color: #000;
+}
+.first-body .search-bar button{
+    display: none;
+}
+
+
+/* CONTAINER */
+.container{
+    text-align: left;
+    color: #ffffff;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 70px;
+  }
+  .container h2{
+    font-family: "Dosis", "sans-serif";
+    font-size: 45px;
+  }
+  .container h1{
+    font-family: "Dosis", "sans-serif";
+    font-size: 80px;
+    padding-top: 25px;
+  }
+  .container p{
+    font-family: "Dosis", "sans-serif";
+    padding-top: 20px;
+    font-size: 30px;
+    width: 100%;
+    font-weight: light;
+  }
+  .container h4{
+    font-family: "Dosis", "sans-serif";
+    padding-top: 20px;
+    font-size: 30px;
+  }
+  .container h4 span{
+    color: rgb(223, 223, 29);
+    border-bottom: 3px solid rgba(223, 223, 29);
+  }
+  .total{
+    display: flex;
+    justify-content: end;
+  }
+  .total {
+    position: sticky;
+    top: 90%;
+  }
+  .help{
+    background-color: rgb(20, 167, 20);
+    width: 7%;
+    padding: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .help p{
+    font-size: 20px;
+  }
+  .help p a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Dosis", "sans-serif";
+  }
+  .help a .fa-circle-question{
+    color: rgb(200, 193, 193);
+    padding-right: 7px;
+  }
+
+
+  /* THIRD-BODY MENU */
+  .third-body h2{
+    font-family: "Dosis", "sans-serif";
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  .third-body img{
+    height: 95px;
+  }
+  .third-body .first-img{
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+/* FOURTH-BODY MENU */
+  .fourth-body .fourth-word{
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 70px;
+  }
+  .fourth-body .fourth-word h1{
+    font-family: "Dosis", "sans-serif";
+    font-size: 40px;
+    padding-bottom: 15px;
+  }
+  .fourth-body .fourth-word p{
+    font-family: "Dosis", "sans-serif";
+    font-size: 25px;
+    width: auto;
+  }
+  .fourth-body .write-container .box img{
+    animation: moveToLeft 5s;
+  }
+  .display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .fourth-body .write-container{
+    border-radius: 5px;
+    background-color: #e4f2ec;
+    width: 400px;
+    height: 250px;
+  }
+  .fourth-body .write-container h3{
+    font-family: "Dosis", "sans-serif";
+    font-size: 21px;
+    margin: 0px auto;
+  }
+  .fourth-body .write-container p{
+    font-family: "Dosis", "sans-serif";
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .fourth-body .box{
+    padding: 20px;
+  }
+  .image-container img{
+    width: 400px;
+    height: 250px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+/* FIFTH-BODY MENU */
+.fifth-body{
+  text-align: center;
+  margin: 30px 0;
+}
+.fifth-body h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 45px;
+}
+.fifth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 23px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 14px;
+}
+
+/* SEVENTH-BODY MENU */
+.seventh-body{
+  margin-top: 50px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+ }
+ .seventh-body .under-s h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 22px;
+  color: rgb(17, 230, 230);
+ }
+ .seventh-body .under-s h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 23px;
+  color: #000;
+  padding-top: 15px;
+ }
+ .seventh-body .under-s p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 21px;
+  color: #000;
+  padding-top: 25px;
+  width: 100%;
+ }
+ .seventh-body .under-s ul{
+  font-family: "Dosis", "sans-serif";
+  font-size: 17px;
+  color: #000;
+  padding-top: 22px;
+
+ }
+ .seventh-body .under-s ul span{
+  font-family: "Dosis", "sans-serif";
+  font-size: 19px;
+  color: #000;
+  font-weight: bolder;
+  padding-top: 15px;
+ }
+ .under-img img{
+  height: 400px;
+ }
+    
+
+/* EIGHT-BODY MENU */
+.eighth-body2{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+ }
+ .eighth-body2 .under-s2{
+  margin-top: 18px;
+ }
+ .eighth-body2 .under-s2 h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 22px;
+  color: rgb(17, 230, 230);
+ }
+ .eighth-body2 .under-s2 h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 23px;
+  color: #000;
+  padding-top: 15px;
+ }
+ .eighth-body2 .under-s2 p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 21px;
+  color: #000;
+  padding-top: 25px;
+  width: 100%;
+ }
+ .eighth-body2 .under-s2 ul{
+  font-family: "Dosis", "sans-serif";
+  font-size: 17px;
+  color: #000;
+  padding-top: 32px;
+ }
+ .eighth-body2 .under-s2 ul span{
+  font-family: "Dosis", "sans-serif";
+  font-size: 19px;
+  color: #000;
+  font-weight: bolder;
+  padding-top: 15px;
+ }
+ .under-img2 img{
+  height: 400px;
+  width: 530px;
+ } 
+
+
+ /* NINTH-BODY MENU */
+ .ninth-body{
+  padding: 50px 0;
+  background: #ecf3f0;
+  margin: 40px 0 0 0;
+ }
+ .ninth-body .ninth-words h1{
+  font-family: "Dosis", "sans-serif";
+  font-size: 30px;
+  text-align: center;
+ }
+ .ninth-dis{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+ }
+ .ninth-body .ninth-cont{
+  width: 20%;
+  text-align: center;
+  display: grid;
+  line-height: 18px;
+  place-items: center;
+ }
+ .ninth-body .ninth-words p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 22px;
+  text-align: center;
+  padding-top: 10px;
+  text-align: center;
+ }
+ .ninth-body .ninth-cont .number{
+  width: 65px;
+  height: 65px;
+  background-color: #0170c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+ }
+ .ninth-body .ninth-cont p{
+  padding-top: 15px;
+  font-family: "Dosis", "sans-serif";
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+ }
+ .ninth-body .ninth-cont .number h4{
+  color: #fff;
+  font-family: "Dosis", "sans-serif";
+  font-size: 24px;  
+ }
+ .ninth-body .ninth-cont  h3{
+  padding-top: 15px;
+  font-family: "Dosis", "sans-serif";
+  font-size: 21px;
+  text-align: center;
+ }
+
+ /* TENTH-BODY MENU */
+ .tenth-body{
+  margin: 50px 0;
+}
+.tenth-body h2{
+  text-align: center;
+  font-family: "Dosis", "sans-serif";
+  font-size: 45px;
+}
+.tenth-body h2 span{
+  color: rgb(32, 170, 170);
+}
+.tenth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 28px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-top: 15px;
+}
+.tenth-body p span{
+  color: rgb(32, 170, 170);
+  font-weight: bolder;
+}
+.tenth-body .dis-img{
+  display: grid;
+  place-content: center;
+  margin-top: 50px;
+}
+
+
+/* ELEVENTH-BODY MENU */
+.eleventh-body{
+  padding: 50px 0;
+  background-color: rgb(158, 197, 197);
+}
+.eleventh-body .wahan{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.eleventh-body .first-word{
+  border-right: 2px solid #000;
+  padding-right: 130px;
+}
+.eleventh-body .first-word h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+.eleventh-body .first-word h1{
+  font-family: "Dosis", "sans-serif";
+  font-size: 22px;
+}
+.eleventh-body .second-word img{
+  width: 135px;
+}
+.eleventh-body .second-word p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 20px;
+}
+.eleventh-body .wuhan{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 0;
+}
+.eleventh-body .wuhan img{
+  width: 270px;
+}
+.eleventh-body .wuhan .word1{
+  background-color: #000;
+  border-top: 5px solid rgb(230, 12, 12);
+  color: #fff;
+  width: 175px;
+  padding: 90px 50px;
+  text-align: center;
+  font-family: "Dosis","sans-serif";
+  color: rgb(32, 170, 170);
+  letter-spacing: 4px;
+}
+.eleventh-body .wuhan h2{
+  color: #fff;
+  margin-bottom: 15px;
+}
+.eleventh-body .wuhan h3{
+  color: rgb(32, 170, 170);
+}
+.eleventh-body .wehan{
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.eleventh-body .wehan .word-one{
+  background-color: #000;
+  border-top: 5px solid rgb(230, 12, 12);
+  color: #fff;
+  width: 700px;
+  height: 430px;
+  font-size: 18px;
+  padding: 20px 50px;
+  text-align: left;
+  display: grid;
+  place-items: center;
+  font-family: "Dosis","sans-serif";
+  color: #fff;
+  letter-spacing: 4px;
+}
+.eleventh-body .wehan img{
+  width: 500px;
+}
+.eleventh-body .wehan .word-one h2{
+  color: #fff;
+  padding-bottom: 35px;
+}
+.eleventh-body .wehan .word-one h4{
+  color: rgb(32, 170, 170);
+}
+
+/* TWELVETH-BODY MENU */
+.twelvth-body{
+  background-color: rgb(7, 104, 104);
+  color: #fff;
+  padding: 50px 0;
+}
+.twelvth-body h1{
+  text-align: center;
+  font-family: "Dosis", "sans-serif";
+  font-size: 45px;
+}
+.twelvth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 25px;
+  text-align: center;
+}
+/* LAST MENU */
+.last-part{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+.last-part .four-ins{
+  width: 300px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 24px;
+}
+.last-part .four-ins .future h4{
+  font-family: "Dosis", sans-serif;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.last-part .four-ins .future p{
+  font-family: "Dosis", sans-serif;
+  font-size: 21px;
+}
+.last-part .four-ins img{
+  width: 70px;
+  height: 60px;
+}
+
+ /* FOOTER-BODY */
+ footer{
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 120px;
+}
+.foot{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.foot2{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+footer h3{
+  font-family: "Dosis", sans-serif;
+  color: #F6BB1E;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+footer p{
+  font-family: "Dosis", sans-serif;
+  color: #fff; 
+}
+footer .fa-facebook{
+  color: #fff;
+  font-size: 33px;
+}
+footer .fa-instagram, .fa-twitter, .fa-whatsapp{
+  color: #fff;
+  font-size: 33px;
+  padding-left: 20px;
+}
+footer .fa-brands:hover{
+  color: #b09857;
+}
+footer h3 span{
+  text-decoration: none;
+  color: #F6BB1E;
+}
+
+
+/* FIFTH MENU */
+.fourteen-body{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10%;
+  margin-bottom: 30px;
+}
+.fourteen-body h2{
+  line-height: 1.2;
+  font-size: 30px;
+  color: #128372;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body h1{
+  font-size: 27px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body .polo{
+  width: 100%;
+}
+.fourteen-body .believe{
+  border-right: 2px solid #000;
+  margin-right: 110px;
+}
+.fourteen-body h1 span{
+  color: rgb(212, 141, 9);
+}
+.fourteen-body p{
+  width: 60%;
+  font-family: "Dosis", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.fourteen-body a{
+  border-bottom: 2px solid #3a8273;
+  color: #3a8273;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body a .fa-arrow-right{
+  width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 900px){
+/* FIRST-BODY */
+.first-body nav .logo img{
+    width: 100px;
+    margin-left: 10px;
+}  
+.container{
+    text-align: left;
+    color: #ffffff;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 110px;
+  }
+  .container h2{
+    font-family: "Dosis", "sans-serif";
+    font-size: 25px;
+  }
+  .container h1{
+    font-family: "Dosis", "sans-serif";
+    font-size: 35px;
+    padding-top: 25px;
+  }
+  .container p{
+    font-family: "Dosis", "sans-serif";
+    padding-top: 20px;
+    font-size: 20px;
+    width: 100%;
+    font-weight: light;
+  }
+  .container h4{
+    font-family: "Dosis", "sans-serif";
+    padding-top: 20px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    width: 100%;
+    line-height: 25px;
+  }
+  .container h4 span{
+    color: rgb(223, 223, 29);
+    border-bottom: 3px solid rgba(223, 223, 29);
+  }
+  .help{
+    background-color: rgb(20, 167, 20);
+    width: 15%;
+    padding: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .help p{
+    font-size: 13px;
+  }
+  .help p a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Dosis", "sans-serif";
+  }
+  .help a .fa-circle-question{
+    color: rgb(200, 193, 193);
+  }
+  /* SEARCH BAR */
+  /* SEARCH BAR FOR SECOND BODY */
+.first-body .search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 3px 6px;
+    color: rgb(255, 255, 255); 
+    font-size: 11px;
+    width: 80%;
+}
+  /* THIRD-BODY MENU */
+  .third-body h2{
+    font-family: "Dosis", "sans-serif";
+    text-align: center;
+    font-size: 11px;
+    padding-bottom: 15px;
+  }
+  .third-body img{
+    height: 30px;
+  }
+  .third-body .first-img{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* FOURTH-BODY MENU */
+  .fourth-body .fourth-word{
+    text-align: center;
+    margin-bottom: 0px;
+    padding-top: 20px;
+  }
+  .fourth-body .fourth-word h1{
+    font-family: "Dosis", "sans-serif";
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  .fourth-body .fourth-word p{
+    font-family: "Dosis", "sans-serif";
+    font-size: 15px;
+    width: auto;
+    padding-bottom: 15px;
+  }
+  .display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .fourth-body .write-container{
+    border-radius: 5px;
+    background-color: #e4f2ec;
+    width: 170px;
+    height: 130px;
+  }
+  .fourth-body .grid2{
+    display: none;
+  }
+  .fourth-body .write-container h3{
+    font-family: "Dosis", "sans-serif";
+    font-size: 12px;
+    margin: 0px auto;
+    padding-bottom: 5px;
+  }
+  .fourth-body .write-container p{
+    font-family: "Dosis", "sans-serif";
+    font-size: 10px;
+    line-height: 13px;
+  }
+  .fourth-body .box{
+    padding: 10px;
+  }
+  .fourth-body .box img{
+    width: 25px;
+    height: 25px;
+    padding-bottom: 5px;
+    animation: moveToLeft 5s;
+  }
+  .image-container img{
+    width: 110px;
+    height: 100px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  /* FIFTH-BODY MENU */
+.fifth-body{
+  text-align: center;
+  margin: 20px 0;
+}
+.fifth-body h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 17px;
+}
+.fifth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 14px;
+}
+
+/* SEVENTH-BODY MENU */
+.seventh-body{
+  margin-top: 20px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+ }
+ .seventh-body .under-s h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 17px;
+  color: rgb(17, 230, 230);
+ }
+ .seventh-body .under-s h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 15px;
+  color: #000;
+  padding-top: 15px;
+ }
+ .seventh-body .under-s p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+  color: #000;
+  padding-top: 25px;
+  width: 100%;
+ }
+ .seventh-body .under-s ul{
+  font-family: "Dosis", "sans-serif";
+  font-size: 12px;
+  color: #000;
+  padding-top: 22px;
+
+ }
+ .seventh-body .under-s ul span{
+  font-family: "Dosis", "sans-serif";
+  font-size: 12px;
+  color: #000;
+  font-weight: bolder;
+  padding-top: 15px;
+ }
+ .under-img img{
+  height: 100px;
+ }
+    
+
+/* EIGHT-BODY MENU */
+.eighth-body2{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+ }
+ .eighth-body2 .under-s2{
+  margin-top: 18px;
+ }
+ .eighth-body2 .under-s2 h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 17px;
+  color: rgb(17, 230, 230);
+ }
+ .eighth-body2 .under-s2 h2{
+  font-family: "Dosis", "sans-serif";
+  font-size: 16px;
+  color: #000;
+  padding-top: 15px;
+ }
+ .eighth-body2 .under-s2 p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 14px;
+  color: #000;
+  padding-top: 25px;
+  width: 100%;
+ }
+ .eighth-body2 .under-s2 ul{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+  color: #000;
+  padding-top: 32px;
+ }
+ .eighth-body2 .under-s2 ul span{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+  color: #000;
+  font-weight: bolder;
+  padding-top: 15px;
+ }
+ .under-img2 img{
+  height: 150px;
+  width: 150px;
+ }
+
+  /* NINTH-BODY MENU */
+  .ninth-body{
+    padding: 25px 0;
+    background: #ecf3f0;
+    margin: 20px 0 0 0;
+   }
+   .ninth-body .ninth-words h1{
+    font-family: "Dosis", "sans-serif";
+    font-size: 18px;
+    text-align: center;
+   }
+   .ninth-dis{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+   }
+   .ninth-body .ninth-cont{
+    width: 30%;
+    text-align: center;
+    display: grid;
+    line-height: 15px;
+    place-items: center;
+   }
+   .ninth-body .ninth-words p{
+    font-family: "Dosis", "sans-serif";
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+    text-align: center;
+   }
+   .ninth-body .ninth-cont .number{
+    width: 35px;
+    height: 35px;
+    background-color: #0170c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   }
+   .ninth-body .ninth-cont p{
+    padding-top: 5px;
+    font-family: "Dosis", "sans-serif";
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+   }
+   .ninth-body .ninth-cont .number h4{
+    color: #fff;
+    font-family: "Dosis", "sans-serif";
+    font-size: 13px;  
+   }
+   .ninth-body .ninth-cont h3 span{
+    display: none;
+   }
+   .ninth-body .ninth-cont  h3{
+    padding-top: 15px;
+    font-family: "Dosis", "sans-serif";
+    font-size: 13px;
+    text-align: center;
+   }
+   .ninth-body .ninth-cont p span{
+    display: none;
+   }
+
+    /* TENTH-BODY MENU */
+ .tenth-body{
+  margin: 30px 0;
+}
+.tenth-body h2{
+  text-align: center;
+  font-family: "Dosis", "sans-serif";
+  font-size: 18px;
+}
+.tenth-body h2 span{
+  color: rgb(32, 170, 170);
+}
+.tenth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 15px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding-top: 10px;
+}
+.tenth-body p span{
+  color: rgb(32, 170, 170);
+  font-weight: bolder;
+}
+.tenth-body .dis-img{
+  margin-top: 20px;
+}
+.tenth-body .dis-img img{
+  width: 60%;
+  margin: auto;
+}
+
+
+/* ELEVENTH-BODY MENU */
+.eleventh-body{
+  padding: 20px 0;
+  background-color: rgb(158, 197, 197);
+}
+.eleventh-body .wahan{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.eleventh-body .first-word{
+  border-right: 2px solid #000;
+  padding-right: 30px;
+  margin-left: 20px;
+}
+.eleventh-body .first-word h3{
+  font-family: "Dosis", "sans-serif";
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.eleventh-body .first-word h1{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+}
+.eleventh-body .second-word img{
+  width: 75px;
+}
+.eleventh-body .second-word{
+  margin-left: 50px;
+}
+.eleventh-body .second-word p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 13px;
+}
+.eleventh-body .wuhan{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px 0;
+}
+.eleventh-body .wuhan img{
+  width: 75px;
+}
+.eleventh-body .wuhan .word1{
+  background-color: #000;
+  border-top: 5px solid rgb(230, 12, 12);
+  color: #fff;
+  width: 60px;
+  padding: 13px;
+  text-align: center;
+  font-family: "Dosis","sans-serif";
+  color: rgb(32, 170, 170);
+  letter-spacing: 0px;
+}
+.eleventh-body .wuhan h2{
+  color: #fff;
+  font-size: 11.5px;
+  margin-bottom: 15px;
+}
+.eleventh-body .wuhan h3{
+  font-size: 12px;
+  color: rgb(32, 170, 170);
+}
+.eleventh-body .wehan{
+  display: block;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.eleventh-body .wehan .word-one{
+  background-color: #000;
+  border-top: 5px solid rgb(230, 12, 12);
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  font-size: 18px;
+  padding: 20px 50px;
+  text-align: left;
+  display: block;
+  font-family: "Dosis","sans-serif";
+  color: #fff;
+  letter-spacing: 0px;
+  font-size: 14px;
+}
+.eleventh-body .wehan img{
+  width: 80px;
+  display: none;
+}
+.eleventh-body .wehan .word-one h2{
+  color: #fff;
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+.eleventh-body .wehan .word-one h4{
+  color: rgb(32, 170, 170);
+}
+
+/* TWELVETH-BODY MENU */
+.twelvth-body{
+  background-color: rgb(7, 104, 104);
+  color: #fff;
+  padding: 50px 0;
+}
+.twelvth-body h1{
+  text-align: center;
+  font-family: "Dosis", "sans-serif";
+  font-size: 45px;
+}
+.twelvth-body p{
+  font-family: "Dosis", "sans-serif";
+  font-size: 25px;
+  text-align: center;
+}
+/* FOOTER MENU */
+footer{
+  background-color: rgb(12, 12, 70);
+  padding: 50px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Dosis", "sans-serif";
+}
+
+/* LAST MENU */
+.last-part{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0%;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.last-part .four-ins{
+  width: 200px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 24px;
+}
+.last-part .four-ins .future h4{
+  font-family: "Dosis", sans-serif;
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+.last-part .four-ins .future p{
+  font-family: "Dosis", sans-serif;
+  font-size: 14px;
+}
+.last-part .four-ins img{
+  width: 55px;
+  height: 35px;
+}
+
+/* FIFTH MENU */
+.fourteen-body{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 6%;
+}
+.fourteen-body h2{
+  line-height: 1.2;
+  font-size: 16px;
+  color: #128372;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body h1{
+  font-size: 15px;
+  line-height: normal;
+  margin-bottom: 10px;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body .polo{
+  width: 100%;
+}
+.fourteen-body .believe{
+  border-right: 2px solid #000;
+  margin-right: 30px;
+}
+.fourteen-body h1 span{
+  color: rgb(212, 141, 9);
+}
+.fourteen-body p{
+  width: 100%;
+  font-family: "Dosis", sans-serif;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.fourteen-body a{
+  border-bottom: 2px solid #3a8273;
+  color: #3a8273;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+}
+.fourteen-body a .fa-arrow-right{
+  width: 20px;
+}
+
+ /* FOOTER-BODY */
+ footer{
+  background-color: #000;
+  display: block;
+  justify-content: none;
+  padding: 20px;
+  margin-top: 30px;
+}
+.foot{
+  padding-top: 20px 0;
+}
+.foot2{
+  padding-top: 20px 0;
+}
+footer h3{
+  font-family: "Dosis", sans-serif;
+  color: #F6BB1E;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-family: "Dosis", sans-serif;
+  color: #fff; 
+  font-size: 18px;
+}
+footer .fa-facebook{
+  color: #fff;
+  font-size: 23px;
+}
+footer .fa-instagram, .fa-twitter, .fa-whatsapp{
+  color: #fff;
+  font-size: 23px;
+  padding-left: 20px;
+}
+footer .fa-brands:hover{
+  color: #b09857;
+}
+footer h3 span{
+  text-decoration: none;
+  color: #F6BB1E;
+}
+
+  }
+
